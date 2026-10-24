@@ -1064,3 +1064,11 @@ html { color-scheme: dark; scrollbar-width: thin; scrollbar-color: rgba(213, 175
 .sim .txt-row { font-size: 12.5px; }
 .sim .kpis b { font-size: 14px; }
 @media (max-width: 900px) { .proj-sim .sim { min-height: 440px; } }
+
+/* portrait: charcoal black-and-white grade, colour returns on hover or touch */
+.portrait img {
+  filter: grayscale(1) contrast(1.08) brightness(.9);
+  transition: transform 1200ms var(--ease-soft, var(--ease-out)), filter 900ms var(--ease-out);
+}
+.hero-visual:hover .portrait img,
+.hero-visual:focus-within .portrait img { filter: grayscale(0) contrast(1) brightness(1); }
